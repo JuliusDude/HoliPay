@@ -1,0 +1,280 @@
+/* Modern Holiday Planner Styles */
+:root {
+    --primary-color: #218A98;
+    --secondary-color: #6CB27C;
+    --accent-color: #FBC25C;
+    --light-bg: #F7F7F7;
+    --dark-text: #333333;
+    --cta-color: #FBC25C;
+    
+    --primary-gradient: linear-gradient(135deg, #218A98 0%, #6CB27C 100%);
+    --secondary-gradient: linear-gradient(135deg, #6CB27C 0%, #FBC25C 100%);
+    --accent-gradient: linear-gradient(135deg, #218A98 0%, #6CB27C 100%);
+    --cta-gradient: linear-gradient(135deg, #FBC25C 0%, #218A98 100%);
+    --card-shadow: 0 10px 30px rgba(33, 138, 152, 0.15);
+    --card-hover-shadow: 0 15px 40px rgba(33, 138, 152, 0.2);
+    --border-radius: 15px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-text);
+}
+
+/* Enhanced Navbar */
+.navbar {
+    background: rgba(247, 247, 247, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(33, 138, 152, 0.15);
+    padding: 0px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--primary-color) !important;
+    transition: var(--transition);
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    color: var(--secondary-color) !important;
+}
+
+.brand-logo {
+    height: 100px;
+    width: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Hero Slideshow */
+.hero-slideshow {
+    margin: 0 auto 2rem;
+    max-width: 1200px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.hero-slideshow .carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.hero-slideshow .carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 2rem;
+    bottom: 2rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 80%;
+}
+
+.hero-slideshow .carousel-caption h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.hero-slideshow .carousel-caption p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+}
+
+/* Container spacing */
+.container {
+    max-width: 1200px;
+}
+
+/* Equal height cards for side-by-side layout */
+.row .col-lg-6 .card {
+    height: 100%;
+}
+
+.row .col-lg-6 .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Modern Cards */
+.card {
+    background: rgba(247, 247, 247, 0.95);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    margin-bottom: 2rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.card-header {
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+    padding: 1.25rem 1.5rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.card-body {
+    padding: 2rem 1.5rem;
+}
+
+/* Modern Form Elements */
+.form-label {
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    transition: var(--transition);
+    font-size: 1rem;
+    color: var(--dark-text);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(33, 138, 152, 0.25);
+    transform: translateY(-1px);
+}
+
+/* Modern Buttons */
+.btn-primary {
+    background: var(--cta-color);
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--dark-text);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(251, 194, 92, 0.4);
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* List Groups */
+.list-group-item {
+    border: none;
+    background: rgba(247, 247, 247, 0.8);
+    backdrop-filter: blur(5px);
+    margin-bottom: 0.5rem;
+    border-radius: 10px !important;
+    padding: 1rem 1.25rem;
+    transition: var(--transition);
+    color: var(--dark-text);
+}
+
+.list-group-item:hover {
+    background: rgba(33, 138, 152, 0.1);
+    transform: translateX(5px);
+}
+
+/* Budget Summary */
+#budgetSummary {
+    background: var(--accent-gradient);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(33, 138, 152, 0.3);
+}
+
+/* Destination Carousel */
+#destinationCarousel .carousel-item img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#destinationCarousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-slideshow .carousel-item img {
+        height: 300px;
+    }
+    
+    .hero-slideshow .carousel-caption {
+        padding: 1rem;
+        bottom: 1rem;
+    }
+    
+    .hero-slideshow .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem 1rem;
+    }
+    
+    #destinationCarousel .carousel-item img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-slideshow .carousel-item img {
+        height: 250px;
+    }
+    
+    .hero-slideshow .carousel-caption h2 {
+        font-size: 1.25rem;
+    }
+    
+    .hero-slideshow .carousel-caption p {
+        font-size: 0.9rem;
+    }
+    
+    #destinationCarousel .carousel-item img {
+        height: 220px;
+    }
+}
+
+/* Animation for page load */
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
